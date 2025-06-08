@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/complete.css') }}"></head>
+<body>
+    <div id="profile-container">
+        <h1>Thank you! Finish!</h1>
+        <h2>Name:{{ profile.name }}</h2>
+        <div class="profile">
+            <img src="{{ profile.profile_image_url }}" alt="Profile Image" id="profile-image">
+        </div>
+        <button id="save-button">Save Image</button>
+        <br>
+    </div>
+    <button id="next-button" data-next-url="{{ url_for('complete.show_group_members') }}">Show Group Member</button>
+
+    <script>
+        const GROUP_NAME = "{{ group_name }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/complete.js') }}" defer></script>
+</body>
+</html>

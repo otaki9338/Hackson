@@ -1,0 +1,93 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff; /* 淡いブルー */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: auto;
+}
+
+/* タイトルスタイル */
+h1 {
+    color: #336699; /* ダークブルー */
+    font-size: 4vw;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    color: #336699; /* ダークブルー */
+    font-size: 3vw;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+
+#profile-container {
+    background-color: #ffffff;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+#profile-image {
+    width: 70%;
+    height: auto;
+    margin: 20px;
+}
+
+/* 次へボタン */
+#next-button {
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#next-button:active {
+    transform: translateY(0);
+}
+
+/* 保存ボタン */
+#save-button {
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#save-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#save-button:active {
+    transform: translateY(0);
+}
+

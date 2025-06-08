@@ -1,0 +1,200 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff; /* 淡いブルー */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: auto;
+}
+
+/* タイトルスタイル */
+h1 {
+    color: #336699; /* ダークブルー */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 質問のコンテナ */
+#questions-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+#questions-container:hover {
+    transform: scale(1.02);
+}
+
+/* 各質問 */
+.question, .custom-question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #336699; /* ダークブルー */
+}
+
+/* インプットボックス */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #99ccff; /* ライトブルー */
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #336699; /* ダークブルー */
+}
+
+/* 次へボタン */
+#next-button {
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#next-button:active {
+    transform: translateY(0);
+}
+
+/* 終了メッセージ */
+#finish-message {
+    font-size: 1.5em;
+    color: #336699; /* ダークブルー */
+}
+
+/* カメラコンテナ */
+#camera-container {
+    padding: 20px;
+    width: 70%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* コンテナの背景色（オプション） */
+    border-radius: 10px; /* コンテナの角を丸くする（オプション） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* コンテナの影（オプション） */
+
+}
+
+#capture-button {
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#capture-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#capture-button:active {
+    transform: translateY(0);
+}
+
+#onCamera-button {
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#onCamera-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#onCamera-button:active {
+    transform: translateY(0);
+}
+
+#video-label {
+    display: block;
+    font-size: 1.7em;
+    margin-bottom: 5px;
+    color: #336699; /* ダークブルー */
+}
+
+#video {
+    width: 70%;
+    height: auto;
+    margin: 0, auto;
+    display: inline-block;
+}
+
+#captured-label {
+    display: block;
+    font-size: 1.7em;
+    margin-bottom: 5px;
+    color: #336699; /* ダークブルー */
+}
+
+/* 撮影された画像 */
+#captured-image {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/* ローディングアニメーション用のスタイル */
+#loading-spinner {
+    border: 16px solid #f3f3f3; /* グレーの背景 */
+    border-top: 16px solid #3498db; /* 青色のスピナー */
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+    
+    position: fixed; /* 要素を固定 */
+    top: 60%;
+    left: 44%;
+    
+    display: none; /* 初期状態では非表示 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

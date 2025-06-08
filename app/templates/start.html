@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start - Enter Group Name</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/start.css') }}">
+</head>
+<body>
+    </div>
+    <h1>Enter Your Group Name</h1>
+    <div id="questions-container">
+        <form id="group-form" action="{{ url_for('start.group') }}" method="POST">
+            <div class='question'>
+                <label for="group_name">Group Name:</label>
+                <br>
+                <input type="text" id="group_name" name="group_name" required>
+            </div>
+        </form>
+    </div>
+    <button type="button" id="next-button" class="btn btn-primary">Next</button>
+
+    <script>
+       // 入力フィールドとボタンを取得
+       const groupNameInput = document.getElementById("group_name");
+       const nextButton = document.getElementById("next-button");
+       nextButton.disabled = true; // 初期状態では「次へ」ボタンを無効にする
+
+       // 入力フィールドにイベントリスナーを追加
+       groupNameInput.addEventListener('input', function() {
+           // 入力が空でない場合にボタンを有効化
+           nextButton.disabled = !groupNameInput.value.trim();
+       });
+
+       // ボタンクリック時の処理
+       nextButton.addEventListener('click', function() {
+           document.getElementById('group-form').submit();
+       });
+    </script>
+</body>
+</html>

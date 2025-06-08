@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question From</title>
+    <link rel="stylesheet" href="../static/js/question.js">
+    <link rel="stylesheet" href="../static/css/question.css">
+</head>
+<body>
+
+    <h1>Answer Question</h1>
+
+    <div id="questions-container"></div>
+
+    <!-- カメラキャプチャ用の要素 -->
+    <div id="camera-container" style="display: none;">
+        <button id='onCamera-button'>Camera ON</button>
+        <br>
+        <br>
+        <video id="video" width="640" height="480" autoplay></video>
+        <label id="video-label">Video Image</label>
+        <button id="capture-button">Capture</button>
+        <br>
+        <br>
+        <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+        <img id="captured-image" width="640" height="480">
+        <label id="captured-label">Captured Image</label>
+    </div>
+    <br>
+
+    <button id="next-button">Next</button>
+
+    <p id="finish-message" style="display: none;">Loading</p>
+
+    <div id="loading-spinner"></div>
+
+    
+
+    <!-- Flaskから渡されたgroup_nameをJavaScriptに埋め込む -->
+    <script>
+        const GROUP_NAME = "{{ group_name }}";
+    </script>
+
+    <!-- JavaScriptファイルを読み込む -->
+    <script type="module" src="../static/js/question.js"></script>
+</body>
+</html>

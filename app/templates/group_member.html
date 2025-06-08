@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/complete.css') }}"></head>
+<body>
+    <div id="profile-container">
+        <h1>Group Name : {{ group_name }}</h1>
+        
+        {% for name, profiles in profiles.items() %}
+            <h2>Name:{{ name }}</h2>
+            {% for profile in profiles %}
+                <div class="profile">
+                    <img src="{{ profile.profile_image_url }}" alt="Profile Image" id="profile-image">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>

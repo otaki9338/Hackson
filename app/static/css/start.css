@@ -1,0 +1,87 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f2ff; /* 淡いブルー */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    overflow: auto;
+}
+
+/* タイトルスタイル */
+h1 {
+    color: #336699; /* ダークブルー */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 質問のコンテナ */
+#questions-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+#questions-container:hover {
+    transform: scale(1.02);
+}
+
+/* 各質問 */
+.question, .custom-question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #336699; /* ダークブルー */
+}
+
+/* インプットボックス */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #99ccff; /* ライトブルー */
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #336699; /* ダークブルー */
+}
+
+/* 次へボタン */
+#next-button{
+    background-color: #336699; /* ダークブルー */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #264d73; /* さらに暗いブルー */
+    transform: translateY(-3px);
+}
+
+#next-button:active {
+    transform: translateY(0);
+}
